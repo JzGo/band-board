@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'haml'
 
 group :development do
   gem 'better_errors'
