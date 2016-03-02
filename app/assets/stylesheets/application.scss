@@ -32,8 +32,9 @@
  }
  .navbar-btn {
    margin-right: 10px;
-   border: 2px solid #7FDBFA;
-   color: #7FDBFA;
+   border: 2px solid #5BC0ED;
+   border-radius: 3px;
+   color: #5BC0ED;
    background: white;
    box-shadow: none;
    &:hover {
@@ -41,4 +42,8 @@
      color: #35A3FC;
      background: white;
     }
+ }
+ #start {
+   border: none;
+   border-radius: 0px;
  }
