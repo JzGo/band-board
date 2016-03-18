@@ -9,7 +9,7 @@ class MemberTest < ActiveSupport::TestCase
 
   test "Member is not saved if memberid to provided" do
     member2 = Member.new(email: "member2@example.com", password: "12344321")
-    assert_not(member2.valid?, "Member is valid without membername")
+    assert_not(member2.valid?, "Member is valid without memberid")
   end
 
   test "Member is not saved if password not provided" do
