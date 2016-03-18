@@ -16,4 +16,10 @@ class MemberTest < ActiveSupport::TestCase
     member3 = Member.new(memberid: "Mel", email: "member3@example.com")
     assert_not(member3.valid?, "Member is valid without password")
   end
+
+  test "Member is not valid if memberid is not unique" do
+    member4 = Member.create(memberid: "AceBassist", email: "member4@example.com", password: "password1")
+    member5 = Member.new(memberid: "AceBassist", email: "member5@example.com", password: "password2")
+    assert_not(member5.valid?, "Member is valid with duplicated memberid")
+  end
 end

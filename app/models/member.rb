@@ -4,6 +4,5 @@ class Member < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :memberid, presence: true
-  validates :memberid, uniqueness: true
+  validates :memberid, presence: true, uniqueness: true
 end
