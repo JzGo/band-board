@@ -5,4 +5,6 @@ class Member < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :memberid, presence: true, uniqueness: true
+
+  has_and_belongs_to_many :bands
 end
