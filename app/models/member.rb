@@ -6,5 +6,6 @@ class Member < ActiveRecord::Base
 
   validates :memberid, presence: true, uniqueness: true
 
-  has_and_belongs_to_many :bands
+  has_many :band_through, class_name: 'Membership', foreign_key: :member_id, dependent: :destroy
+  has_many :bands, through: :band_through, source: :band
 end
