@@ -1,3 +1,4 @@
+# require 'capybara/rails'
 require 'rails_helper'
 
 RSpec.feature "home", type: :feature do
