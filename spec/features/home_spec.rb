@@ -17,4 +17,5 @@ RSpec.feature "home", type: :feature do
     end
   end
   it "if member not signed in, shows welcome"
+  it "if member signed in, shows member dash"
 end
