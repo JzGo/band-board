@@ -36,7 +36,6 @@
    border-radius: 3px;
    color: #5BC0ED;
    background: white;
-   box-shadow: none;
    &:hover {
      border: 2px solid #35A3FC;
      color: #35A3FC;
@@ -51,9 +50,12 @@
     &:visited {
     background-color: white;
     outline: none;
-   }
+  }
  }
  #start {
    border: none;
    border-radius: 0px;
+   &:focus {
+     outline: none;
+   }
  }
