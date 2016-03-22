@@ -1,8 +1,10 @@
 %nav{:class => "navbar navbar-default"}
   %a{:class => "navbar-brand", :href => "#"} BandBoard
   %ul{:class => "nav navbar-nav navbar-right"}
-    %button{:class => "btn btn-default navbar-btn", :href => "#"} Sign In
-    %button{:class => "btn btn-default navbar-btn", :href => "#"} Sign Up
+    -# %button{:class => "btn btn-default navbar-btn", :href => "#"} Sign In
+    = link_to "Sign In", new_member_session_path, :class => 'navbar-btn'
+    -# %button{:class => "btn btn-default navbar-btn", :href => "#"} Sign Up
+    = link_to "Sign Up", new_member_registration_path, :class => 'navbar-btn'
 .jumbotron
   %h3 All the band stuff in one place!
   %button{:id => "start", :class => "btn btn-info", :href => "#"} Get Started!
