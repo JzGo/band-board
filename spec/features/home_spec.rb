@@ -32,7 +32,7 @@ RSpec.feature "home", type: :feature do
     it "shows signup form" do
       visit "/"
       click_on('Get Started!')
-      expect(page).to have_content('Sign Up')
+      expect(page).to have_content('Email')
     end
   end
 end
