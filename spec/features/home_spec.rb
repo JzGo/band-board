@@ -1,5 +1,6 @@
 # require 'capybara/rails'
 require 'rails_helper'
+# require 'database_cleaner'
 
 RSpec.feature "home", type: :feature do
   # pending "add some scenarios (or delete) #{__FILE__}"
