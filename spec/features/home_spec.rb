@@ -3,6 +3,7 @@ require 'rails_helper'
 
 RSpec.feature "home", type: :feature do
   # pending "add some scenarios (or delete) #{__FILE__}"
+  member1 = FactoryGirl.create(:member)
 
   describe "home" do
     it "if member not signed in, shows welcome" do
