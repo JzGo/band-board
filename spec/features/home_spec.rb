@@ -11,6 +11,14 @@ RSpec.feature "home", type: :feature do
       visit "/"
       expect(page).to have_content('Get Started!')
     end
+    it "redirects to member dash on successful sign in" do
+      visit "/"
+      click_on("Sign In")
+      fill_in('Email', :with => member1.email)
+      fill_in('Password', :with => member1.password)
+      click_on('Log in')
+      expect(page).to have_content('Stuff')
+    end
     it "if member signed in, shows member dash"
   end
 
