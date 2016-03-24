@@ -4,8 +4,8 @@ require 'rails_helper'
 
 RSpec.feature "home", type: :feature do
   # pending "add some scenarios (or delete) #{__FILE__}"
-  member1 = FactoryGirl.create(:member)
-  member2 = FactoryGirl.build(:member)
+  let(:member1) { FactoryGirl.create(:member)}
+  let(:member2) { FactoryGirl.build(:member)}
 
   describe "home#index" do
     #TODO Clean up tests
@@ -36,7 +36,7 @@ RSpec.feature "home", type: :feature do
     it "shows signin form" do
       visit "/"
       click_on('Sign In')
-      expect(page).to have_content('Sign In')
+      expect(page).to have_content('Email')
     end
   end
 
@@ -44,7 +44,7 @@ RSpec.feature "home", type: :feature do
     it "shows signup form" do
       visit "/"
       click_on('Sign Up')
-      expect(page).to have_content('Sign Up')
+      expect(page).to have_content('Password confirmation')
     end
     it "creates a new member" do
       visit "/"
