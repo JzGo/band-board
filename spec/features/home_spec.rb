@@ -19,7 +19,7 @@ RSpec.feature "home", type: :feature do
       fill_in('Email', :with => member1.email)
       fill_in('Password', :with => member1.password)
       click_on('Log in')
-      expect(page).to have_content('Stuff')
+      expect(page).to have_content('Dashboard')
     end
     it "if member signed in, shows member dash" do
       visit "/"
@@ -28,7 +28,7 @@ RSpec.feature "home", type: :feature do
       fill_in('Password', :with => member1.password)
       click_on('Log in')
       visit "/"
-      expect(page).to have_content('Stuff')
+      expect(page).to have_content('Dashboard')
     end
   end
 
