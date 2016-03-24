@@ -6,7 +6,7 @@ RSpec.feature "home", type: :feature do
   # pending "add some scenarios (or delete) #{__FILE__}"
   member1 = FactoryGirl.create(:member)
 
-  describe "home" do
+  describe "home#index" do
     #TODO Clean up tests
     it "if member not signed in, shows welcome" do
       visit "/"
