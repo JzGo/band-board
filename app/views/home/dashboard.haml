@@ -1,4 +1,13 @@
 = render "shared/navbar"
 
 .content
-  %h1 #{current_member.memberid}'s Dashboard
+  %h2 #{current_member.memberid}'s Dashboard
+  .bandspace
+    %h3 Your bands
+    .band-ul
+      - if @bands.empty?
+        %p Get in the game!
+      - else
+        %ul
+          = @bands.each do | band |
+            %li band.name
