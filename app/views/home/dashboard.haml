@@ -8,6 +8,6 @@
       - if @bands.empty?
         %p Get in the game!
       - else
-        %ul
+        %ul{:class => "bands"}
           = @bands.each do | band |
-            %li band.name
+            %li{:class => "band-name"} band.name
