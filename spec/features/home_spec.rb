@@ -54,7 +54,7 @@ RSpec.feature "home", type: :feature do
       fill_in('Password', :with => member2.password)
       fill_in('Password confirmation', :with => member2.memberid)
       click_on('Sign up')
-      expect(Member.all.count).to eql(2)
+      expect(Member.first.memberid).to eql(member2.memberid)
     end
   end
 
