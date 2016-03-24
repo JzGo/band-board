@@ -1,5 +1,8 @@
 %nav{:class => "navbar navbar-default"}
   %a{:class => "navbar-brand", :href => "/"} BandBoard
   %ul{:class => "nav navbar-nav navbar-right"}
-    = link_to "Sign In", new_member_session_path, :class => 'navbar-btn'
-    = link_to "Sign Up", new_member_registration_path, :class => 'navbar-btn'
+    - if current_member
+      = link_to "Sign Out", destroy_member_session_path, :method => :delete, :class => 'navbar-btn'
+    - else
+      = link_to "Sign In", new_member_session_path, :class => 'navbar-btn'
+      = link_to "Sign Up", new_member_registration_path, :class => 'navbar-btn'
