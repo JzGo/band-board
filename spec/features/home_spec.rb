@@ -7,6 +7,7 @@ RSpec.feature "home", type: :feature do
   member1 = FactoryGirl.create(:member)
 
   describe "home" do
+    #TODO Clean up tests
     it "if member not signed in, shows welcome" do
       visit "/"
       expect(page).to have_content('Get Started!')
@@ -19,7 +20,15 @@ RSpec.feature "home", type: :feature do
       click_on('Log in')
       expect(page).to have_content('Stuff')
     end
-    it "if member signed in, shows member dash"
+    it "if member signed in, shows member dash" do
+      visit "/"
+      click_on("Sign In")
+      fill_in('Email', :with => member1.email)
+      fill_in('Password', :with => member1.password)
+      click_on('Log in')
+      visit "/"
+      expect(page).to have_content('Stuff')
+    end
   end
 
   describe "signin" do
