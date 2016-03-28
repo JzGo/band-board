@@ -3,7 +3,7 @@ require 'test_helper'
 class EventTest < ActiveSupport::TestCase
 
   test "Event is not saved without title" do
-    event1 = Event.new()
+    event1 = Event.new(time: Time.now(), place: "here", type: "practice")
     assert_not(event1.valid?, "Event is valid without title")
   end
 
