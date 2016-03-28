@@ -13,12 +13,12 @@ class EventTest < ActiveSupport::TestCase
   end
 
   test "Event is not saved without location" do
-    event3 = Event.new()
+    event3 = Event.new(title: "First gig last rehearsal", time: Time.now(), event_type: "rehearsal")
     assert_not(event3.valid?, "Event is valid without location")
   end
 
   test "Event is not saved without type" do
-    event4 = Event.new()
+    event4 = Event.new(title: "Learn you new set", time: Time.now(), place: "here")
     assert_not(event4.valid?, "Event is valid without type")
   end
 
